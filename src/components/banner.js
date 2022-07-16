@@ -4,7 +4,6 @@ import Img from "gatsby-image";
 export default class Banner extends Component {
   render() {
     const { data } = this.props;
-    console.log('debug data', data)
     return (
       <div className="banner">
         <Img
@@ -14,8 +13,8 @@ export default class Banner extends Component {
         />
         <div className="container">
           <div className="banner-details">
-            <span>Hello...</span>
-            <h1>I'm {data.designation}.</h1>
+            <span>{data.designation}</span>
+            <h1>{data.name}</h1>
             {
               data.bannerList &&
               <ul className="sub-data">
@@ -25,46 +24,61 @@ export default class Banner extends Component {
               </ul>
             }
             <ul className="social">
-              <li>
-                <a
-                  className="fab fa-facebook-f"
-                  href={data.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  className="fab fa-twitter"
-                  href={data.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  className="fab fa-instagram"
-                  href={data.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  className="fab fa-linkedin-in"
-                  href={data.linkdin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  className="fab fa-github"
-                  href={data.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                ></a>
-              </li>
+              {
+                data.facebook &&
+                <li>
+                  <a
+                    className="fab fa-facebook-f"
+                    href={data.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  ></a>
+                </li>
+              }
+              {
+                data.twitter &&
+                <li>
+                  <a
+                    className="fab fa-twitter"
+                    href={data.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  ></a>
+                </li>
+              }
+              {
+                data.instagram &&
+                <li>
+                  <a
+                    className="fab fa-instagram"
+                    href={data.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  ></a>
+                </li>
+              }
+              {
+                data.linkdin &&
+                <li>
+                  <a
+                    className="fab fa-linkedin-in"
+                    href={data.linkdin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  ></a>
+                </li>
+              }
+              {
+                data.github &&
+                <li>
+                  <a
+                    className="fab fa-github"
+                    href={data.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  ></a>
+                </li>
+              }
             </ul>
           </div>
         </div>
