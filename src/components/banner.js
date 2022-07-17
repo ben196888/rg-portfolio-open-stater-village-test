@@ -58,11 +58,11 @@ export default class Banner extends Component {
                 </li>
               }
               {
-                data.linkdin &&
+                data.linkedin &&
                 <li>
                   <a
                     className="fab fa-linkedin-in"
-                    href={data.linkdin}
+                    href={data.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                   ></a>

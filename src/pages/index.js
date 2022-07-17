@@ -94,7 +94,7 @@ export const pageQuery = graphql`
       gmail
       id
       instagram
-      linkdin
+      linkedin
       twitter
       location
       description {

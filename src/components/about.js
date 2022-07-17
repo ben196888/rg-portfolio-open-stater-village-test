@@ -75,7 +75,7 @@ const Header = ({ data }) => (
                 <li>
                   <a
                     className="fab fa-linkedin-in"
-                    href={data.linkdin}
+                    href={data.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                   ></a>
